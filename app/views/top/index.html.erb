@@ -1,0 +1,13 @@
+<h1>Google OpenID 2.0 to OpenID Connect migration demo app</h1>
+<dif><%= flash.notice %></div>
+<article id="user_nav">
+  <% if current_user %>
+    User Info,
+    <pre>
+    <%= current_user %>
+    </pre>
+    <%= link_to "Sign Out", signout_path %>
+  <% else %>
+    <%= link_to "Sign-in with OpenID 2.0", "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" %>
+  <% end %>
+</article>
